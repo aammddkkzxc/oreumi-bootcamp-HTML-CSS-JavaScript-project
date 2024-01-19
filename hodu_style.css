@@ -1,20 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    border : 0;
-}
-
-html, body {
+html, body{
     height: 100%;
 }
 
 .wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 66.666667%;
 }
 
-header, #intro{
+#wrapper_center{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 66.666667%;
+}
+
+header, #article_intro{
+    display:flex;
+    justify-content:center;
     background-color: #F2E9D8;
+}
+
+#article_example, #article_magazine, #contact, form, footer{
+    display:flex;
+    justify-content:center;
+}
+
+.wrapper_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#intro_img{
+    width:415px;
+    height:766px;
+}
+
+#article_example_img{
+    width:660px;
+    height:390px;
 }
