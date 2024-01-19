@@ -1,4 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    border : 0;
+}
+
 html, body {
     height: 100%;
 }
 
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+header, #intro{
+    background-color: #F2E9D8;
+}
