@@ -97,6 +97,7 @@ img {
 }
 
 /* global layout end */
+
 /* header layout start */
 #nav_header {
     display: flex;
@@ -112,7 +113,7 @@ ul {
     margin: 0 49px;
 }
 
-#list.gnb li {
+#list_gnb li {
     float: left;
 }
 
@@ -281,6 +282,29 @@ a:hover {
 }
 
 /* subscribe layout end */
+
+/* footer layout start */
+
+#home_btn_footer {
+    width: 226px;
+    height: 70px;
+    margin: 45px 0;
+}
+
+#sns_link_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 228px;
+    height: 42px;
+}
+
+.link_images {
+    width: 42px;
+    height: 100%;
+}
+
+/* footer layout end */
 
 /* 모달 레이아웃 */
 
