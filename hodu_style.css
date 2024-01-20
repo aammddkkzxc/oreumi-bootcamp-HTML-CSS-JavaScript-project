@@ -8,8 +8,13 @@
     font-style: normal;
 }
 
-.thick_writing {
+
+.font_thick_writing {
     font-weight: 700;
+}
+
+.font_colored_writing {
+    color: #D97652;
 }
 
 .sample {
@@ -32,8 +37,8 @@ header, #article_intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 66.666667%;
-    line-height:20px;
+    width: 66.666667vw;
+    line-height: 20px;
 }
 
 .wrapper_center {
@@ -42,8 +47,12 @@ header, #article_intro {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 66.666667%;
-    line-height:20px;
+    width: 66.666667vw;
+    line-height: 20px;
+}
+
+div {
+    box-sizing: border-box;
 }
 
 button {
@@ -51,15 +60,15 @@ button {
     background-color: #D97652;
     color: #FFF;
     font-weight: 700;
+    border-radius: 40px;
 }
 
 .download_btn {
     width: 140px;
     height: 50px;
-    border-radius: 40px;
 }
 
-img{
+img {
     border: none;
 }
 
@@ -126,11 +135,71 @@ a:hover {
 
 /* article_intro layout end */
 
+/* article_example layout start */
+
 #article_example_img {
     width: 660px;
     height: 390px;
+    box-shadow: 10px 10px 30px 0 #000000;
 }
 
+#article_example_text_heading {
+    font-size: 36px;
+    line-height: 45px;
+    margin: 30px 0;
+}
+
+#article_example_text_content {
+    margin: 30px 0;
+}
+
+/* article_example layout end */
+
+/* article_magazine layout start */
+
+#article_magazine_text_heading {
+    font-size: 48px;
+    line-height: 60px;
+    margin: 40px 0;
+}
+
+#article_magazine_img {
+    margin: 88px 0 100px;
+}
+
+#article_magazine_text_additional {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 28px 0;
+}
+
+#show_more_btn {
+    width: 143px;
+    height: 50px;
+}
+
+/* article_magazine layout end */
+
+
+/* 가상 요소 줄긋기 시작 */
+
+#main_contents article:nth-child(3){
+    position: relative;
+    margin-bottom: 149px;
+}
+
+#main_contents article:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    left: 16.71875vw;
+    right: 16.71875vw;/*버튼 넓이에 비례하여 설정*/
+    bottom: -80px; /*버튼 높이에 비례햐여 설정*/
+    height: 1px;
+    width: 66.5625vw; /*뷰포트에 비례하여 설정*/
+    background: #C4C4C4;
+}
+
+/* 가상 요소 줄긋기 끝 */
 
 /* 모달 레이아웃 */
 
