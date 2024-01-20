@@ -1,30 +1,7 @@
 /* global layout start */
 
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-}
-
-h2 {
-    font-size: 48px;
-    line-height: 60px;
-}
-
-h3 {
-    font-size: 36px;
-    line-height: 45px;
-}
-
-
-.font_thick_writing {
-    font-weight: 700;
-}
-
-.font_colored_writing {
-    color: #D97652;
+* {
+    box-sizing: border-box;
 }
 
 .sample {
@@ -73,6 +50,33 @@ header, #article_intro {
     justify-content: space-around;
     align-items: center;
     width: 66.666667vw;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 60px;
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 45px;
+}
+
+
+.font_thick_writing {
+    font-weight: 700;
+}
+
+.font_colored_writing {
+    color: #D97652;
 }
 
 button {
@@ -262,7 +266,6 @@ a:hover {
     background-repeat: no-repeat;
     background-position: 28px center;
     padding-left: 68px;
-    box-sizing: border-box;
     border-radius: 60px;
     border: none;
     width: 100%;
