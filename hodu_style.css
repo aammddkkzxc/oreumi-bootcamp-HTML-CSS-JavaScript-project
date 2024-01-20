@@ -75,10 +75,6 @@ header, #article_intro {
     width: 66.666667vw;
 }
 
-div {
-    box-sizing: border-box;
-}
-
 button {
     border: none;
     background-color: #D97652;
@@ -266,6 +262,7 @@ a:hover {
     background-repeat: no-repeat;
     background-position: 28px center;
     padding-left: 68px;
+    box-sizing: border-box;
     border-radius: 60px;
     border: none;
     width: 100%;
@@ -277,11 +274,10 @@ a:hover {
 
 #subscribe_box_submit {
     position: absolute;
-    right: -10%;
-    top: 10%;
+    right:1%;
+    top: 8.335%;
     width: 135px;
-    height: 50px;
-    aspect-ratio: 1;
+    height: 83.33%;
 }
 
 /* subscribe layout end */
