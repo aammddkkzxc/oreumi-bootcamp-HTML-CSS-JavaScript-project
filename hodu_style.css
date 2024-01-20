@@ -8,6 +8,14 @@
     font-style: normal;
 }
 
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 36px;
+}
+
 
 .font_thick_writing {
     font-weight: 700;
@@ -47,6 +55,13 @@ header, #article_intro {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 66.666667vw;
+    line-height: 20px;
+}
+
+.wrapper_left {
+    display: flex;
+    flex-direction: column;
     width: 66.666667vw;
     line-height: 20px;
 }
@@ -144,7 +159,6 @@ a:hover {
 }
 
 #article_example_text_heading {
-    font-size: 36px;
     line-height: 45px;
     margin: 30px 0;
 }
@@ -181,7 +195,7 @@ a:hover {
 /* article_magazine layout end */
 
 
-/* 가상 요소 줄긋기 시작 */
+/* 가상 요소 선긋기 시작 */
 
 #main_contents article:nth-child(3){
     position: relative;
@@ -199,7 +213,16 @@ a:hover {
     background: #C4C4C4;
 }
 
-/* 가상 요소 줄긋기 끝 */
+/* 가상 요소 선긋기 끝 */
+
+/* contact layout start */
+
+#contact_text_heading {
+    line-height: 45px;
+    margin: 20px;
+}
+
+/* contact layout end */
 
 /* 모달 레이아웃 */
 
