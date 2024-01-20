@@ -9,7 +9,7 @@
     height: 4319px;
 }
 
-header, #intro_scope {
+header, main {
     display: flex;
     justify-content: center;
     background-color: #F2E9D8;
@@ -201,12 +201,12 @@ a:hover {
 
 /* 가상 요소 선긋기 시작 */
 
-#detail_scope article:nth-child(2) {
+#contents_scope article:nth-child(2) {
     position: relative;
     margin-bottom: 149px;
 }
 
-#detail_scope article:nth-child(2)::after {
+#contents_scope article:nth-child(2)::after {
     content: "";
     position: absolute;
     left: 16.71875vw;
@@ -243,6 +243,7 @@ a:hover {
     height: 200px;
     border-radius: 30px;
     background-color: #263140;
+    margin-bottom: 240px;
 }
 
 #subscribe_text {
@@ -259,7 +260,7 @@ a:hover {
     position: relative;
 }
 
-#subscribe_box_input {
+#subscribe_container_input {
     background-image: url("images/mail_img.png");
     background-repeat: no-repeat;
     background-position: 28px center;
@@ -273,7 +274,7 @@ a:hover {
     line-height: 20px;
 }
 
-#subscribe_box_submit {
+#subscribe_container_submit {
     position: absolute;
     right:1%;
     top: 8.335%;
@@ -283,30 +284,32 @@ a:hover {
 
 /* subscribe layout end */
 
-/* footer layout start */
+/* outro img layout start */
 
-#home_btn_footer {
-    width: 226px;
-    height: 70px;
-    margin: 45px 0;
+#support_scope{
+    position: relative;
 }
 
-#sns_link_list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 228px;
-    height: 42px;
+#outro_img_container{
+    position: absolute;
+    bottom:0;
+    overflow: hidden;
+    width:100%;
+    height:340px;
 }
 
-.link_images {
-    width: 42px;
-    height: 100%;
+#outro_img{
+    position: absolute;
+    z-index: -10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
-/* footer layout end */
+/* outro img layout end */
 
-/* 모달 레이아웃 */
+/* modal layout start */
 
 #modal_scope {
     display: none;
@@ -331,3 +334,28 @@ a:hover {
     z-index: 10;
     background-image: url("images/modal-background_img.png");
 }
+
+/* modal layout end */
+
+/* footer layout start */
+
+#home_btn_footer {
+    width: 226px;
+    height: 70px;
+    margin: 45px 0;
+}
+
+#sns_link_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 228px;
+    height: 42px;
+}
+
+.link_images {
+    width: 42px;
+    height: 100%;
+}
+
+/* footer layout end */
