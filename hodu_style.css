@@ -10,10 +10,12 @@
 
 h2 {
     font-size: 48px;
+    line-height: 60px;
 }
 
 h3 {
     font-size: 36px;
+    line-height: 45px;
 }
 
 
@@ -59,11 +61,18 @@ header, #article_intro {
     line-height: 20px;
 }
 
-.wrapper_left {
+.wrapper_column {
     display: flex;
     flex-direction: column;
     width: 66.666667vw;
     line-height: 20px;
+}
+
+.wrapper_around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 66.666667vw;
 }
 
 div {
@@ -100,7 +109,7 @@ ul {
     width: 205px;
     justify-content: space-around;
     align-items: center;
-    margin: 0px 49px;
+    margin: 0 49px;
 }
 
 #list.gnb li {
@@ -140,7 +149,6 @@ a:hover {
 
 #intro_text_heading {
     font-size: 48px;
-    line-height: 60px;
     margin: 30px 0;
 }
 
@@ -159,7 +167,6 @@ a:hover {
 }
 
 #article_example_text_heading {
-    line-height: 45px;
     margin: 30px 0;
 }
 
@@ -173,7 +180,6 @@ a:hover {
 
 #article_magazine_text_heading {
     font-size: 48px;
-    line-height: 60px;
     margin: 40px 0;
 }
 
@@ -197,16 +203,16 @@ a:hover {
 
 /* 가상 요소 선긋기 시작 */
 
-#main_contents article:nth-child(3){
+#main_contents article:nth-child(3) {
     position: relative;
     margin-bottom: 149px;
 }
 
-#main_contents article:nth-child(3)::after{
+#main_contents article:nth-child(3)::after {
     content: "";
     position: absolute;
     left: 16.71875vw;
-    right: 16.71875vw;/*버튼 넓이에 비례하여 설정*/
+    right: 16.71875vw; /*버튼 넓이에 비례하여 설정*/
     bottom: -80px; /*버튼 높이에 비례햐여 설정*/
     height: 1px;
     width: 66.5625vw; /*뷰포트에 비례하여 설정*/
@@ -218,11 +224,67 @@ a:hover {
 /* contact layout start */
 
 #contact_text_heading {
-    line-height: 45px;
     margin: 20px;
 }
 
+#contact_text_content {
+    font-weight: 500;
+}
+
+#contact_map {
+    width: 1278px;
+    height: 520px;
+    margin: 48px 0 80px;
+}
+
 /* contact layout end */
+
+/* subscribe layout start */
+
+#subscribe {
+    height: 200px;
+    border-radius: 30px;
+    background-color: #263140;
+}
+
+#subscribe_text {
+    color: #FFF;
+}
+
+#subscribe_text_heading {
+    margin-bottom: 18px;
+}
+
+#subscribe_box {
+    width: 27.6vw;
+    height: 60px;
+    position: relative;
+}
+
+#subscribe_box_input {
+    background-image: url("images/mail_img.png");
+    background-repeat: no-repeat;
+    background-position: 28px center;
+    padding-left: 68px;
+    border-radius: 60px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#subscribe_box_submit {
+    position: absolute;
+    right: -10%;
+    top: 10%;
+    width: 135px;
+    height: 50px;
+    aspect-ratio: 1;
+}
+
+/* subscribe layout end */
 
 /* 모달 레이아웃 */
 
