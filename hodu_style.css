@@ -9,7 +9,7 @@
     height: 4319px;
 }
 
-header, #article_intro {
+header, #intro_scope {
     display: flex;
     justify-content: center;
     background-color: #F2E9D8;
@@ -137,10 +137,7 @@ a:hover {
 
 /* header layout end*/
 
-/* article_intro layout start */
-
-#intro_contents {
-}
+/* intro layout start */
 
 #intro_img {
     width: 415px;
@@ -156,7 +153,7 @@ a:hover {
     margin: 30px 0;
 }
 
-/* article_intro layout end */
+/* intro layout end */
 
 /* article_example layout start */
 
@@ -203,12 +200,12 @@ a:hover {
 
 /* 가상 요소 선긋기 시작 */
 
-#main_contents article:nth-child(3) {
+#detail_scope article:nth-child(2) {
     position: relative;
     margin-bottom: 149px;
 }
 
-#main_contents article:nth-child(3)::after {
+#detail_scope article:nth-child(2)::after {
     content: "";
     position: absolute;
     left: 16.71875vw;
@@ -287,7 +284,7 @@ a:hover {
 
 /* 모달 레이아웃 */
 
-#modal_content {
+#modal_scope {
     display: none;
     position: fixed;
     top: 0;
