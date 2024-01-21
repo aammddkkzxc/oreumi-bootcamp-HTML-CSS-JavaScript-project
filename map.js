@@ -1,3 +1,4 @@
+// var elem = document.documentElement;
 var mapContainer = document.getElementById('map_wrap'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(33.442356231224345, 126.57190681471637), // 지도의 중심좌표
@@ -33,7 +34,7 @@ function zoomOut() {
 }
 
 function openFullScreen() {
-    var elem = map;
+    let elem = map;
     if(!elem) alert("specify element for full screen.")
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
