@@ -221,8 +221,8 @@ a:hover {
     left: 16.71875vw;
     right: 16.71875vw; /*버튼 넓이에 비례하여 설정*/
     bottom: -80px; /*버튼 높이에 비례햐여 설정*/
-    height: 1px;
     width: 66.5625vw; /*뷰포트에 비례하여 설정*/
+    height: 1px;
     background: #C4C4C4;
 }
 
@@ -320,6 +320,17 @@ a:hover {
 /* outro img layout end */
 
 /* scroll_btn layout start */
+
+
+#support_scope::after{
+    position: sticky;
+    float: right;
+    right: 24px;
+    bottom: 184px;  /*165+19*/
+    content : url("images/scroll-img.png");
+    width: 50px;
+    height: 50px;
+}
 
 /* scroll layout end */
 
