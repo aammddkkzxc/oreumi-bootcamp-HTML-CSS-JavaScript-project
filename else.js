@@ -4,9 +4,13 @@ scrollBtn.addEventListener('mouseenter', function() {
     scrollUp();
 });
 
+scrollBtn.addEventListener('mouseleave', function() {
+    clearInterval(scrollInterval);
+});
+
 function scrollUp() {
     const scrollTime = 1000;
-    const scrollLength = -window.scrollY / (scrollTime / 10);
+    const scrollLength = -window.scrollY / (scrollTime / 20);
 
     const scrollInterval = setInterval(() => {
         if (window.scrollY !== 0) {
