@@ -332,17 +332,17 @@ a:hover {
 /* scroll_btn layout start */
 
 
-#support_scope::after{
+#scroll_btn{
     position: sticky;
     float: right;
     right: 24px;
     bottom: 184px;  /*165+19*/
-    content : url("images/scroll-img.png");
+    background-image: url("images/scroll-img.png");
     width: 50px;
     height: 50px;
 }
 
-/* scroll layout end */
+/* scroll_btn layout end */
 
 /* modal layout start */
 

@@ -34,8 +34,6 @@ function setMarker() {
 
 /*                   뼈대 끝                 */
 
-setMap();
-
 /*               이벤트 함수 시작             */
 
 // 지도 타입 설정 함수
@@ -82,6 +80,8 @@ function openFullScreen() {
         mapContainer.msRequestFullscreen();
     }
 }
+
+setMap();
 
 //연습중
 // mapContainer.addEventListener('wheel', function(event) {
