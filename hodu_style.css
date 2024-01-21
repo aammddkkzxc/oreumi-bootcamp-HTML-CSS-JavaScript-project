@@ -191,8 +191,20 @@ a:hover {
     margin: 40px 0;
 }
 
-#article_magazine_img {
+#article_magazine_container {
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template:378px / repeat(3, 378px);
     margin: 88px 0 100px;
+    gap: 72px;
+}
+
+#article_magazine_container img{
+    width: 378px;
+    height: 378px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px 0 #000000;
 }
 
 #article_magazine_text_additional {
