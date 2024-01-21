@@ -52,6 +52,15 @@ header, main {
     width: 66.666667vw;
 }
 
+.wrapper_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -258,6 +267,7 @@ a:hover {
     width: 27.6vw;
     height: 60px;
     position: relative;
+    z-index: 10;
 }
 
 #subscribe_container_input {
@@ -311,23 +321,6 @@ a:hover {
 
 /* scroll_btn layout start */
 
-#scroll_btn {
-    position: absolute;
-    right: 24px;
-    bottom: 19px;
-    background-color: transparent;
-    color: transparent;
-    font-weight: 0;
-    border-radius: 0;
-    width: 50px;
-    height: 50px;
-}
-
-#scroll_btn_img {
-    width: 100%;
-    height: 100%;
-}
-
 /* scroll layout end */
 
 /* modal layout start */
@@ -335,6 +328,7 @@ a:hover {
 #modal_scope {
     display: none;
     position: fixed;
+    z-index: 100;
     top: 0;
     right: 0;
     bottom: 0;
@@ -352,8 +346,24 @@ a:hover {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 400px;
-    z-index: 10;
     background-image: url("images/modal-background_img.png");
+}
+
+#modal_img {
+    display: block;
+    width: 110px;
+    height: 112px;
+}
+
+#modal_text_content {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#modal_btn {
+    width: 183px;
+    height: 50px;
+    gap: 10px;
 }
 
 /* modal layout end */
