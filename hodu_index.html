@@ -104,15 +104,17 @@
                 <div id="map_wrap">
                     <div id="contact_map">
                     </div>
-                    <!-- 지도타입 컨트롤 div 입니다 -->
+                    <!-- 지도타입 컨트롤 div -->
                     <div class="custom_typecontrol radius_border font_thick_writing">
                         <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
                         <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
                     </div>
-                    <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+                    <!-- 지도 컨트롤 div -->
                     <div class="custom_zoomcontrol radius_border font_thick_writing">
                         <p onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></p>
                         <p onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></p>
+                        <p onclick="initializeScreen()"><img src="images/initialize_screen_img.png" alt="다시중앙으로" id="go_to_center_img"></p>
+                        <p onclick="openFullScreen()">sss</p>
                     </div>
                 </div>
             </div>
