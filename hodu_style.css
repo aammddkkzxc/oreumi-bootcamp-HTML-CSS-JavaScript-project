@@ -353,10 +353,9 @@ a:hover {
 
 #scroll_btn{
     position: fixed;
-    display: inline;
     float: right;
-    right: 19px;
-    bottom: 184px;  /*160+24*/
+    right: 24px;
+    bottom: 179px;  /*160+19*/
     background-image: url("images/scroll-img.png");
     width: 50px;
     height: 50px;
@@ -367,7 +366,7 @@ a:hover {
 /* modal layout start */
 
 #modal_scope {
-    display: flex;
+    display: none;
     position: fixed;
     z-index: 100;
     top: 0;

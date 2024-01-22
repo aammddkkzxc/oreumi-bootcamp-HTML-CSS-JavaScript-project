@@ -5,6 +5,8 @@ let emailInput = document.getElementById('subscribe_container_input');
 const modal = document.querySelector('#modal_scope');
 const modalBtn = document.getElementById('modal_btn');
 
+/* 스크롤 이벤트 시작*/
+
 scrollBtn.addEventListener('mouseenter', function() {
     scrollUp();
 });
@@ -26,22 +28,28 @@ function scrollUp() {
     }, 15);
 }
 
+/* 스크롤 이벤트 끝 */
 
-function enter() {
-    if (emailInput.keyCode === 13) {
+/* subscribe 이벤트 시작 */
+
+subscribeBtn.addEventListener('click', validateEmail);
+emailInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        validateEmail();
     }
-}
+});
 
-subscribeBtn.addEventListener('click', function validateEmail() {
-    let email = emailInput.value;
+function validateEmail() {
+    let email_address = emailInput.value;
 
-    if (emailCheck(email)) {
-        modal.style.display='flex';
+    if (emailCheck(email_address)) {
+        modal.style.display = 'flex';
     } else {
         alert('유효하지 않는 이메일 주소입니다.');
         emailInput.focus();
     }
-})
+}
+
 
 function emailCheck(email_address){
     email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
@@ -55,3 +63,5 @@ modalBtn.addEventListener('click', function () {
 function closeModal() {
     modal.style.display='none';
 }
+
+/* subscribe 이벤트 끝 */
