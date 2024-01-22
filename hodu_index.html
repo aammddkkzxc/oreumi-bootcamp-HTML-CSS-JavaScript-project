@@ -14,185 +14,187 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=38c7fc1ce562365bc09b26e355b572ec"></script>
 </head>
 <body>
-    <header role="banner" id="index_banner">
-        <div class="wrapper_between">
-            <a href="hodu_index.html" class="home_btn">
-                <img src="images/home_btn_img.png" alt="home_button" id="home_btn_header">
-            </a>
-            <nav role="navigation" id="nav_header">
-                <ul id="list_gnb">
-                    <li>
-                        <a href="#index_banner">Home</a>
-                    </li>
-                    <li>
-                        <a href="#intro_scope">About</a>
-                    </li>
-                    <li>
-                        <a href="#support_scope">Support</a>
-                    </li>
-                </ul>
-                <a href="hodu_index.html" download>
-                    <button class="download_btn">Download</button>
-                </a>
-            </nav>
-        </div>
-    </header>
-    <main id="intro_scope">
-        <div class="wrapper_between">
-            <div id="intro_contents">
-                <h2 class="font_thick_writing" id="intro_text_heading">
-                    Lorem Ipsum is simply<br>
-                    dummy text of the printing and
-                </h2>
-                <p id="intro_text_content">
-                    Lorem Ipsum is simply dummy text of the printing and<br>
-                    typesetting industry.<br>
-                    Lorem Ipsum has been the industry's standard dummy text<br>
-                    ever since the 1500s, when an unknown
-                </p>
-                <a href="hodu_index.html" download>
-                    <button class="download_btn">Download</button>
-                </a>
-            </div>
-            <img src="images/intro_img.png" alt="" id="intro_img">
-        </div>
-    </main>
-    <section id="contents_scope">
-        <article id="article_example">
+    <div class="wrapper_whole">
+        <header role="banner" id="index_banner">
             <div class="wrapper_between">
-                <img src="images/article_example_img.png" alt="" id="article_example_img">
-                <div id="article_example_text">
-                    <h3 class="font_thick_writing" id="article_example_text_heading">
+                <a href="hodu_index.html" class="home_btn">
+                    <img src="images/home_btn_img.png" alt="home_button" id="home_btn_header">
+                </a>
+                <nav role="navigation" id="nav_header">
+                    <ul id="list_gnb">
+                        <li>
+                            <a href="#index_banner">Home</a>
+                        </li>
+                        <li>
+                            <a href="#intro_scope">About</a>
+                        </li>
+                        <li>
+                            <a href="#support_scope">Support</a>
+                        </li>
+                    </ul>
+                    <a href="hodu_index.html" download>
+                        <button class="download_btn">Download</button>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main id="intro_scope">
+            <div class="wrapper_between">
+                <div id="intro_contents">
+                    <h2 class="font_thick_writing" id="intro_text_heading">
                         Lorem Ipsum is simply<br>
-                        dummy text of the printing<br>
-                        and dummy text
-                    </h3>
-                    <p id="article_example_text_content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting<br>
-                        industry.
+                        dummy text of the printing and
+                    </h2>
+                    <p id="intro_text_content">
+                        Lorem Ipsum is simply dummy text of the printing and<br>
+                        typesetting industry.<br>
+                        Lorem Ipsum has been the industry's standard dummy text<br>
+                        ever since the 1500s, when an unknown
                     </p>
+                    <a href="hodu_index.html" download>
+                        <button class="download_btn">Download</button>
+                    </a>
                 </div>
+                <img src="images/intro_img.png" alt="" id="intro_img">
             </div>
-        </article>
-        <article id="article_magazine">
-            <div class="wrapper_center">
-                <h2 class="font_thick_writing font_colored_writing" id="article_magazine_text_heading">
-                    dummy text of the printing and dummy
-                </h2>
-                <p id="article_magazine_text_content">
-                    Lorem Ipsum is simply <span class="font_thick_writing font_colored_writing">dummy text</span> of the printing and typesetting industry.<br>
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                </p>
-                <div id="article_magazine_container">
-                    <img src="images/magazine_1.png" alt="">
-                    <img src="images/magazine_2.png" alt="">
-                    <img src="images/magazine_3.png" alt="">
-                    <img src="images/magazine_4.png" alt="">
-                    <img src="images/magazine_5.png" alt="">
-                    <img src="images/magazine_6.png" alt="">
-                </div>
-                <p class="font_thick_writing" id="article_magazine_text_additional">
-                    Continue exploring HODU
-                </p>
-                <button id="show_more_btn">Show more</button>
-            </div>
-        </article>
-    </section>
-    <section id="support_scope">
-        <article id="contact">
-            <div class="wrapper_column">
-                <h3 class="font_thick_writing" id="contact_text_heading">
-                    Where you’ll be
-                </h3>
-                <p id="contact_text_content">
-                    330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
-                </p>
-                <div id="map_wrap">
-                    <div id="contact_map">
-                    </div>
-                    <!-- 지도타입 컨트롤 div -->
-                    <div class="custom_typecontrol radius_border font_thick_writing">
-                        <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
-                        <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
-                    </div>
-                    <!-- 지도 컨트롤 div -->
-                    <div class="custom_zoomcontrol radius_border font_thick_writing">
-                        <p onclick="zoomIn()"><img src="images/plus_img.png" alt="확대"></p>
-                        <p onclick="zoomOut()"><img src="images/minus_img.png" alt="축소"></p>
-                        <p onclick="initializeScreen()"><img src="images/initialize_screen_img.png" alt="다시중앙으로" id="initialize_screen_img"></p>
-                        <p onclick="openFullScreen()" id="sss"><img src="images/full_screen_img.png" alt="전체화면" id="full_screen_img"></p>
+        </main>
+        <section id="contents_scope">
+            <article id="article_example">
+                <div class="wrapper_between">
+                    <img src="images/article_example_img.png" alt="" id="article_example_img">
+                    <div id="article_example_text">
+                        <h3 class="font_thick_writing" id="article_example_text_heading">
+                            Lorem Ipsum is simply<br>
+                            dummy text of the printing<br>
+                            and dummy text
+                        </h3>
+                        <p id="article_example_text_content">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting<br>
+                            industry.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </article>
-        <div id="subscribe_wrapper">
-            <div class="wrapper_around" role="form" id="subscribe">
-                <div id="subscribe_text">
-                    <h3 class="font_thick_writing" id="subscribe_text_heading">
-                        Subscribe to our Blog post
-                    </h3>
-                    <p id="subscribe_text_content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
-                        Lorem Ipsum has been the industry's standard dummy text
+            </article>
+            <article id="article_magazine">
+                <div class="wrapper_center">
+                    <h2 class="font_thick_writing font_colored_writing" id="article_magazine_text_heading">
+                        dummy text of the printing and dummy
+                    </h2>
+                    <p id="article_magazine_text_content">
+                        Lorem Ipsum is simply <span class="font_thick_writing font_colored_writing">dummy text</span> of the printing and typesetting industry.<br>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
                     </p>
+                    <div id="article_magazine_container">
+                        <img src="images/magazine_1.png" alt="">
+                        <img src="images/magazine_2.png" alt="">
+                        <img src="images/magazine_3.png" alt="">
+                        <img src="images/magazine_4.png" alt="">
+                        <img src="images/magazine_5.png" alt="">
+                        <img src="images/magazine_6.png" alt="">
+                    </div>
+                    <p class="font_thick_writing" id="article_magazine_text_additional">
+                        Continue exploring HODU
+                    </p>
+                    <button id="show_more_btn">Show more</button>
                 </div>
-                <div id="subscribe_box">
-                    <input type="email" id="subscribe_container_input" placeholder="Enter your e-mail address">
-                    <button type="submit" id="subscribe_container_submit">Subscribe</button>
+            </article>
+        </section>
+        <section id="support_scope">
+            <article id="contact">
+                <div class="wrapper_column">
+                    <h3 class="font_thick_writing" id="contact_text_heading">
+                        Where you’ll be
+                    </h3>
+                    <p id="contact_text_content">
+                        330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
+                    </p>
+                    <div id="map_wrap">
+                        <div id="contact_map">
+                        </div>
+                        <!-- 지도타입 컨트롤 div -->
+                        <div class="custom_typecontrol radius_border font_thick_writing">
+                            <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">map</span>
+                            <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">sky view</span>
+                        </div>
+                        <!-- 지도 컨트롤 div -->
+                        <div class="custom_zoomcontrol radius_border font_thick_writing">
+                            <p onclick="zoomIn()"><img src="images/plus_img.png" alt="zoom_in"></p>
+                            <p onclick="zoomOut()"><img src="images/minus_img.png" alt="zoom_out"></p>
+                            <p onclick="initializeScreen()"><img src="images/initialize_screen_img.png" alt="initialize_screen" id="initialize_screen_img"></p>
+                            <p onclick="openFullScreen()" id="sss"><img src="images/full_screen_img.png" alt="open_full_screen" id="full_screen_img"></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div id="subscribe_wrapper">
+                <div class="wrapper_around" role="form" id="subscribe">
+                    <div id="subscribe_text">
+                        <h3 class="font_thick_writing" id="subscribe_text_heading">
+                            Subscribe to our Blog post
+                        </h3>
+                        <p id="subscribe_text_content">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>
+                            Lorem Ipsum has been the industry's standard dummy text
+                        </p>
+                    </div>
+                    <div id="subscribe_box">
+                        <input type="email" id="subscribe_container_input" placeholder="Enter your e-mail address">
+                        <button type="submit" id="subscribe_container_submit">Subscribe</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="outro_img_container">
-            <img src="images/outro_img.png" alt="" id="outro_img">
-        </div>
-        <div id="scroll_btn"></div>
-    </section>
-    <section id="modal_scope">
-        <article id="modal_body">
-            <div class="wrapper_modal">
-                <img src="images/representation_img.png" alt="" id="modal_img">
-                <h3 class="font_thick_writing font_colored_writing">
-                    Thank you!
-                </h3>
-                <p id="modal_text_content">
-                    Lorem Ipsum is simply dummy text of the printing industry.
-                </p>
-                <button type="button" id="modal_btn">
-                    OK! I love HODU
-                </button>
+            <div id="outro_img_container">
+                <img src="images/outro_img.png" alt="" id="outro_img">
             </div>
-        </article>
-    </section>
-    <footer role="contentinfo">
-        <div class="wrapper_between">
-            <a href="hodu_index.html" class="home_btn">
-                <img src="images/home_btn_img.png" alt="home_button" id="home_btn_footer">
-            </a>
-            <nav role="navigation" id="nav_footer">
-                <ul id="sns_link_list">
-                    <li>
-                        <a href="https://www.notion.so/oreumi/1ac0b997ac16440095ea1f1fd6b7d12c" target="_blank">
-                            <img src="images/blog_img.png" alt="blog_link" class="link-images">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/weniv_official/" target="_blank">
-                            <img src="images/instagram_img.png" alt="instagram_link" class="link-images">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/Jejucoding" target="_blank">
-                            <img src="images/facebook_img.png" alt="facebook_link" class="link-images">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/@weniv" target="_blank">
-                            <img src="images/youtube_lmg.png" alt="youtube_link" class="link-images">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
+            <div id="scroll_btn"></div>
+        </section>
+        <section id="modal_scope">
+            <article id="modal_body">
+                <div class="wrapper_modal">
+                    <img src="images/representation_img.png" alt="" id="modal_img">
+                    <h3 class="font_thick_writing font_colored_writing">
+                        Thank you!
+                    </h3>
+                    <p id="modal_text_content">
+                        Lorem Ipsum is simply dummy text of the printing industry.
+                    </p>
+                    <button type="button" id="modal_btn">
+                        OK! I love HODU
+                    </button>
+                </div>
+            </article>
+        </section>
+        <footer role="contentinfo">
+            <div class="wrapper_between">
+                <a href="hodu_index.html" class="home_btn">
+                    <img src="images/home_btn_img.png" alt="home_button" id="home_btn_footer">
+                </a>
+                <nav role="navigation" id="nav_footer">
+                    <ul id="sns_link_list">
+                        <li>
+                            <a href="https://www.notion.so/oreumi/1ac0b997ac16440095ea1f1fd6b7d12c" target="_blank">
+                                <img src="images/blog_img.png" alt="blog_link" class="link-images">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/weniv_official/" target="_blank">
+                                <img src="images/instagram_img.png" alt="instagram_link" class="link-images">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/Jejucoding" target="_blank">
+                                <img src="images/facebook_img.png" alt="facebook_link" class="link-images">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@weniv" target="_blank">
+                                <img src="images/youtube_lmg.png" alt="youtube_link" class="link-images">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

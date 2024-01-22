@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-.sample {
-    width: 1920px;
-    height: 4319px;
-}
-
 header, main {
     display: flex;
     justify-content: center;
@@ -20,11 +15,16 @@ header, main {
     justify-content: center;
 }
 
+.wrapper_whole {
+    width: 100%;
+    height: 100%;
+}
+
 .wrapper_between {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 66.666667vw;
+    width: 1280px;
     line-height: 20px;
 }
 
@@ -34,14 +34,14 @@ header, main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 66.666667vw;
+    width: 1280px;
     line-height: 20px;
 }
 
 .wrapper_column {
     display: flex;
     flex-direction: column;
-    width: 66.666667vw;
+    width: 1280px;
     line-height: 20px;
 }
 
@@ -49,7 +49,7 @@ header, main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 66.666667vw;
+    width: 1280px;
 }
 
 .wrapper_modal {
@@ -171,6 +171,7 @@ a:hover {
 #article_example_img {
     width: 660px;
     height: 390px;
+    border-radius: 30px;
     box-shadow: 10px 10px 30px 0 #000000;
 }
 
@@ -221,18 +222,16 @@ a:hover {
 
 /* 가상 요소 선긋기 시작 */
 
-#contents_scope article:nth-child(2) {
+#article_magazine div:first-child {
     position: relative;
     margin-bottom: 149px;
 }
 
-#contents_scope article:nth-child(2)::after {
+#article_magazine div:first-child::after {
     content: "";
     position: absolute;
-    left: 16.71875vw;
-    right: 16.71875vw; /*버튼 넓이에 비례하여 설정*/
-    bottom: -80px; /*버튼 높이에 비례햐여 설정*/
-    width: 66.5625vw; /*뷰포트에 비례하여 설정*/
+    bottom: -80px;
+    width: 100%;
     height: 1px;
     background: #C4C4C4;
 }
@@ -350,6 +349,15 @@ a:hover {
     background-image: url("images/scroll-img.png");
     width: 50px;
     height: 50px;
+}
+
+#scroll_btn::after{
+    content: 'sticky!';
+    font-size: 20px;
+    position: absolute;
+    color: #D97652;
+    font-weight: 700;
+    top: 50px;
 }
 
 /* scroll_btn layout end */

@@ -1,6 +1,7 @@
 const scrollBtn = document.getElementById('scroll_btn');
 let scrollInterval;
 const subscribeBtn = document.getElementById('subscribe_container_submit');
+let emailInput = document.getElementById('subscribe_container_input');
 const modalBody = document.querySelector('#modal_scope');
 const modalBtn = document.getElementById('modal_btn');
 
@@ -26,25 +27,25 @@ function scrollUp() {
 }
 
 
-subscribeBtn.addEventListener('click', function validateEmail() {
-    let emailInput = document.getElementById('subscribe_container_input');
+function enter() {
+    if (emailInput.keyCode === 13) {
+    }
+}
 
+subscribeBtn.addEventListener('click', function validateEmail() {
     let email = emailInput.value;
 
     if (emailCheck(email)) {
         modalBody.style.display='flex';
     } else {
         alert('유효하지 않는 이메일 주소입니다.');
+        emailInput.focus();
     }
 })
 
 function emailCheck(email_address){
     email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
-    if(!email_regex.test(email_address)){
-        return false;
-    }else{
-        return true;
-    }
+    return email_regex.test(email_address);
 }
 
 modalBtn.addEventListener('click', function () {
