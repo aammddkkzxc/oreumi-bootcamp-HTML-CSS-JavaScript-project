@@ -196,8 +196,8 @@ a:hover {
     justify-content: space-around;
     align-items: center;
     grid-template:378px / repeat(3, 378px);
-    margin: 88px 0 100px;
     gap: 72px;
+    margin: 88px 0 100px;
 }
 
 #article_magazine_container img{
