@@ -125,7 +125,7 @@
                 </div>
             </div>
         </article>
-        <form method="post" enctype="application/x-www-form-urlencoded">
+        <div id="subscribe_wrapper">
             <div class="wrapper_around" role="form" id="subscribe">
                 <div id="subscribe_text">
                     <h3 class="font_thick_writing" id="subscribe_text_heading">
@@ -138,10 +138,10 @@
                 </div>
                 <div id="subscribe_box">
                     <input type="email" id="subscribe_container_input" placeholder="Enter your e-mail address">
-                    <button type="submit" id="subscribe_container_submit">Subscribe</button>
+                    <button onclick="openModal(), validateEmail()" type="submit" id="subscribe_container_submit">Subscribe</button>
                 </div>
             </div>
-        </form>
+        </div>
         <div id="outro_img_container">
             <img src="images/outro_img.png" alt="" id="outro_img">
         </div>

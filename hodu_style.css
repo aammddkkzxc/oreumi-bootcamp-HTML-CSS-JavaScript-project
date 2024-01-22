@@ -15,7 +15,7 @@ header, main {
     background-color: #F2E9D8;
 }
 
-#article_example, #article_magazine, #contact, form, footer {
+#article_example, #article_magazine, #contact, #subscribe_wrapper, footer {
     display: flex;
     justify-content: center;
 }
@@ -193,8 +193,6 @@ a:hover {
 
 #article_magazine_container {
     display: grid;
-    justify-content: space-around;
-    align-items: center;
     grid-template:378px / repeat(3, 378px);
     gap: 72px;
     margin: 88px 0 100px;
