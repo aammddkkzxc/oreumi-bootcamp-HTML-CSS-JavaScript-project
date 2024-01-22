@@ -1,38 +1,46 @@
-const imageContainer = document.querySelector("#article_magazine_img_container");
-const showMoreBtn = document.getElementById('show_more_btn');
-let pageToFetch = 1;
+const imageContainer = document.getElementById('magazine_scroll_container');
+const imageList = document.getElementById('magazine_scroll_contents');
+let page = 1;
 
-async function fetchImages(pageNum){
+function activateInfiniteScroll() {
+    imageContainer.style.overflowY = 'scroll';
+
+    imageContainer.addEventListener('scroll', function () {
+        const isScrolledToBottom = imageContainer.scrollHeight - imageContainer.clientHeight <= imageContainer.scrollTop + 1;
+
+        if (isScrolledToBottom) {
+            fetchImages();
+        }
+    });
+
+    imageContainer.dispatchEvent(new Event('scroll'));
+}
+
+async function fetchImages() {
     try {
-        const response = await fetch('https://picsum.photos/v2/list?page='+pageNum+'&limit=3'); // 페이지, 리미트 설정
+        const response = await fetch(`https://picsum.photos/v2/list?page=${page}&limit=3`);
         if (!response.ok) {
             throw new Error('네트워크 응답에 문제가 있습니다.');
         }
+
         const datas = await response.json();
         console.log(datas);
-        addImage(datas);
+
+        makeImageList(datas);
+
+        page++;
+
     } catch (error) {
         console.error('데이터를 가져오는데 문제가 발생했습니다 :', error);
     }
 }
 
-function addImage(datas) {
-    datas.forEach((item)=>{
-        imageContainer.innerHTML = imageContainer.innerHTML + "<img src="+ item.download_url +" alt=' '>";
+function makeImageList(datas) {
+    let html = '';
+
+    datas.forEach((item) => {
+        html += `<img src="${item.download_url}" alt=" ">`;
     });
-    //.innerHTML = "<li><img src=" +datas.[0].download.url + " alt=' '><li>";
+
+    imageList.innerHTML += html;
 }
-
-showMoreBtn.addEventListener('click', () => {
-    fetchImages(pageToFetch += 1);
-});
-
-imageContainer.addEventListener('scroll', function () {
-    // 스크롤 위치 확인
-    const isScrolledToBottom = imageContainer.scrollHeight - imageContainer.clientHeight <= imageContainer.scrollTop + 1;
-
-    // 스크롤이 맨 아래에 도달하면 새로운 데이터 로드
-    if (isScrolledToBottom) {
-        fetchImages(pageToFetch += 1)
-    }
-});
