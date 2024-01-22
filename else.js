@@ -32,9 +32,9 @@ subscribeBtn.addEventListener('click', function validateEmail() {
     let email = emailInput.value;
 
     if (emailCheck(email)) {
-        alert('유효한 이메일 주소입니다.');
         modalBody.style.display='flex';
     } else {
+        alert('유효하지 않는 이메일 주소입니다.');
     }
 })
 
