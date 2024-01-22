@@ -2,7 +2,7 @@ const scrollBtn = document.getElementById('scroll_btn');
 let scrollInterval;
 const subscribeBtn = document.getElementById('subscribe_container_submit');
 let emailInput = document.getElementById('subscribe_container_input');
-const modalBody = document.querySelector('#modal_scope');
+const modal = document.querySelector('#modal_scope');
 const modalBtn = document.getElementById('modal_btn');
 
 scrollBtn.addEventListener('mouseenter', function() {
@@ -36,7 +36,7 @@ subscribeBtn.addEventListener('click', function validateEmail() {
     let email = emailInput.value;
 
     if (emailCheck(email)) {
-        modalBody.style.display='flex';
+        modal.style.display='flex';
     } else {
         alert('유효하지 않는 이메일 주소입니다.');
         emailInput.focus();
@@ -53,5 +53,5 @@ modalBtn.addEventListener('click', function () {
 })
 
 function closeModal() {
-    modalBody.style.display='none';
+    modal.style.display='none';
 }

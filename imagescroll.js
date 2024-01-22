@@ -1,4 +1,4 @@
-const imageContainer = document.querySelector("#article_magazine_container");
+const imageContainer = document.querySelector("#article_magazine_img_container");
 const showMoreBtn = document.getElementById('show_more_btn');
 let pageToFetch = 1;
 

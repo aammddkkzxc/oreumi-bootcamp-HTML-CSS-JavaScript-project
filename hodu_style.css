@@ -16,7 +16,9 @@ header, main {
 }
 
 .wrapper_whole {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
 }
 
@@ -34,7 +36,7 @@ header, main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 1280px;
+    width: 1278px;
     line-height: 20px;
 }
 
@@ -55,7 +57,6 @@ header, main {
 .wrapper_modal {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -113,6 +114,7 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 102px;
 }
 
 ul {
@@ -168,18 +170,25 @@ a:hover {
 
 /* article_example layout start */
 
+#contents_scope {
+    margin-top: 80px;
+}
+
 #article_example_img {
     width: 660px;
     height: 390px;
     border-radius: 30px;
-    box-shadow: 10px 10px 30px 0 #000000;
+    box-shadow: 10px 10px 30px 0 #00000040;
 }
 
 #article_example_text_heading {
-    margin: 30px 0;
+    width: 510px;
+    height: 135px;
 }
 
 #article_example_text_content {
+    width: 510px;
+    height: 40px;
     margin: 30px 0;
 }
 
@@ -188,22 +197,23 @@ a:hover {
 /* article_magazine layout start */
 
 #article_magazine_text_heading {
-    font-size: 48px;
-    margin: 40px 0;
+    margin: 120px 0 40px;
 }
 
-#article_magazine_container {
+#article_magazine_img_container {
+    width: 1278px;
+    height: 828px;
     display: grid;
     grid-template:378px / repeat(3, 378px);
     gap: 72px;
     margin: 88px 0 100px;
 }
 
-#article_magazine_container img{
+#article_magazine_img_container img{
     width: 378px;
     height: 378px;
     border-radius: 30px;
-    box-shadow: 10px 10px 30px 0 #000000;
+    box-shadow: 10px 10px 30px 0 #00000040;
 }
 
 #article_magazine_text_additional {
@@ -224,7 +234,6 @@ a:hover {
 
 #article_magazine div:first-child {
     position: relative;
-    margin-bottom: 149px;
 }
 
 #article_magazine div:first-child::after {
@@ -239,18 +248,17 @@ a:hover {
 /* 가상 요소 선긋기 끝 */
 
 /* contact layout start */
-
-#contact_text_heading {
-    margin: 20px;
+#contact {
+    margin-top: 149px;
 }
-
 #contact_text_content {
+    margin: 20px 0;
     font-weight: 500;
 }
 
 /*map*/
-#map_wrap {position:relative;width: 66.5625vw;height: 520px;margin: 48px 0 80px;}
-#contact_map {position:relative;width: 100%;height: 100%;}
+#map_wrap {position:relative;width: 1278px;height: 520px;margin: 48px 0 80px;}
+#contact_map {position:relative;width: 100%;height: 100%; border-radius: 12px}
 .radius_border{border:1px solid #919191;border-radius:5px;}
 .custom_typecontrol {position:absolute;display:flex;top:10px;right:10px;width:200px;height:35px;margin:0;padding:0;z-index:10;font-size:20px;}
 .custom_typecontrol span {display:block;width:150px;height:35px;float:left;text-align:center;line-height:30px;cursor:pointer;}
@@ -264,6 +272,8 @@ a:hover {
 .custom_zoomcontrol p:nth-child(3){border-bottom:1px solid #bfbfbf;}
 
 /* contact layout end */
+
+
 
 /* subscribe layout start */
 
@@ -283,7 +293,7 @@ a:hover {
 }
 
 #subscribe_box {
-    width: 27.6vw;
+    width: 530px;
     height: 60px;
     position: relative;
     z-index: 10;
@@ -305,10 +315,10 @@ a:hover {
 
 #subscribe_container_submit {
     position: absolute;
-    right: 1%;
-    top: 8.335%;
+    top: 5px;
+    right: 6px;
     width: 135px;
-    height: 83.33%;
+    height: 50px;
 }
 
 /* subscribe layout end */
@@ -342,22 +352,14 @@ a:hover {
 
 
 #scroll_btn{
-    position: sticky;
+    position: fixed;
+    display: inline;
     float: right;
-    right: 24px;
-    bottom: 184px;  /*165+19*/
+    right: 19px;
+    bottom: 184px;  /*160+24*/
     background-image: url("images/scroll-img.png");
     width: 50px;
     height: 50px;
-}
-
-#scroll_btn::after{
-    content: 'sticky!';
-    font-size: 20px;
-    position: absolute;
-    color: #D97652;
-    font-weight: 700;
-    top: 50px;
 }
 
 /* scroll_btn layout end */
@@ -365,7 +367,7 @@ a:hover {
 /* modal layout start */
 
 #modal_scope {
-    display: none;
+    display: flex;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -389,7 +391,7 @@ a:hover {
 }
 
 #modal_img {
-    display: block;
+    margin: 60px 0 24px;
     width: 110px;
     height: 112px;
 }
@@ -397,17 +399,22 @@ a:hover {
 #modal_text_content {
     font-size: 14px;
     line-height: 18px;
+    margin: 12px 0 38px;
 }
 
 #modal_btn {
     width: 183px;
     height: 50px;
     gap: 10px;
+    margin-bottom: 40px;
 }
 
 /* modal layout end */
 
 /* footer layout start */
+footer {
+    height: 160px;
+}
 
 #home_btn_footer {
     width: 226px;
@@ -425,7 +432,7 @@ a:hover {
 
 .link_images {
     width: 42px;
-    height: 100%;
+    height: 42px;
 }
 
 /* footer layout end */
