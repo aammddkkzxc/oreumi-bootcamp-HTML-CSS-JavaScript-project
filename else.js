@@ -30,8 +30,8 @@ function scrollUp() {
 /* 구독 이벤트 시작 */
 
 //구독 이벤트 변수
-const subscribeBtn = document.getElementById('subscribe_container_submit');
-const emailInput = document.getElementById('subscribe_container_input');
+const subscribeBtn = document.getElementById('subscribe_button');
+const emailInput = document.getElementById('subscribe_input');
 const loadingImg = document.getElementById('loading');
 const modal = document.querySelector('#modal_scope');
 const modalBtn = document.getElementById('modal_btn');

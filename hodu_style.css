@@ -1,4 +1,4 @@
-/* global layout start */
+/* -------------------global layout start ----------------------- */
 
 * {
     box-sizing: border-box;
@@ -10,11 +10,12 @@ header, main {
     background-color: #F2E9D8;
 }
 
-#article_example, #article_magazine, #contact, #subscribe_wrapper, footer {
+#article_example, #article_magazine, #contact, #subscribe_container, footer {
     display: flex;
     justify-content: center;
 }
 
+/*문서 전체 wrapper*/
 .wrapper_whole {
     display: flex;
     flex-direction: column;
@@ -22,6 +23,7 @@ header, main {
     height: 100%;
 }
 
+/*header, main, #intro_scope, footer 에서 사용 wrapper*/
 .wrapper_between {
     display: flex;
     justify-content: space-between;
@@ -30,6 +32,7 @@ header, main {
     line-height: 20px;
 }
 
+/*#article_magazine 에서 사용 wrapper*/
 .wrapper_center {
     display: flex;
     flex-direction: column;
@@ -40,6 +43,7 @@ header, main {
     line-height: 20px;
 }
 
+/*#contact 에서 사용 wrapper*/
 .wrapper_column {
     display: flex;
     flex-direction: column;
@@ -47,6 +51,7 @@ header, main {
     line-height: 20px;
 }
 
+/*#subscribe_container 에서 사용 wrapper*/
 .wrapper_around {
     display: flex;
     justify-content: space-around;
@@ -54,6 +59,7 @@ header, main {
     width: 1280px;
 }
 
+/*#modal_body 에서 사용 wrapper */
 .wrapper_modal {
     display: flex;
     flex-direction: column;
@@ -62,6 +68,7 @@ header, main {
     height: 100%;
 }
 
+/*문서 전체 기본 글꼴 */
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -70,11 +77,13 @@ header, main {
     font-style: normal;
 }
 
+/*큰 제목용*/
 h2 {
     font-size: 48px;
     line-height: 60px;
 }
 
+/*작은 제목용*/
 h3 {
     font-size: 36px;
     line-height: 45px;
@@ -89,6 +98,7 @@ h3 {
     color: #D97652;
 }
 
+/*버튼 기본*/
 button {
     border: none;
     background-color: #D97652;
@@ -103,13 +113,14 @@ button {
     height: 50px;
 }
 
+/*이미지*/
 img {
     border: none;
 }
 
-/* global layout end */
+/* ---------------------------- global layout end ---------------------------------------- */
 
-/* header layout start */
+/* ---------------------------- header layout start ---------------------------------------*/
 #nav_header {
     display: flex;
     justify-content: space-around;
@@ -148,9 +159,9 @@ a:hover {
     height: 40px;
 }
 
-/* header layout end*/
+/* ------------------------------- header layout end-----------------------------------*/
 
-/* intro layout start */
+/* ------------------------------- intro layout start ---------------------------------*/
 
 #intro_img {
     width: 415px;
@@ -170,9 +181,9 @@ a:hover {
     margin: 30px 0;
 }
 
-/* intro layout end */
+/* ------------------------------- intro layout end ---------------------------------- */
 
-/* article_example layout start */
+/* ---------------------------- article_example layout start ------------------------- */
 
 #contents_scope {
     margin-top: 80px;
@@ -196,9 +207,9 @@ a:hover {
     margin: 30px 0;
 }
 
-/* article_example layout end */
+/* ------------------------- article_example layout end --------------------------- */
 
-/* article_magazine layout start */
+/* ------------------------ article_magazine layout start ------------------------- */
 
 #article_magazine_text_heading {
     margin: 120px 0 40px;
@@ -235,10 +246,10 @@ a:hover {
     height: 50px;
 }
 
-/* article_magazine layout end */
+/* --------------------------- article_magazine layout end ------------------------- */
 
 
-/* 가상 요소 선긋기 시작 */
+/* ------------------------------ 가상 요소 선긋기 시작 -------------------------------- */
 
 .wrapper_column {
     position: relative;
@@ -253,9 +264,10 @@ a:hover {
     background: #C4C4C4;
 }
 
-/* 가상 요소 선긋기 끝 */
+/* ------------------------------- 가상 요소 선긋기 끝 ---------------------------------- */
 
-/* contact layout start */
+/* ----------------------------- contact layout start -------------------------------- */
+
 #contact {
     margin-top: 149px;
 }
@@ -279,11 +291,11 @@ a:hover {
 .custom_zoomcontrol button:nth-child(2){border-bottom:3px solid #bfbfbf;}
 .custom_zoomcontrol button:nth-child(3){border-bottom:3px solid #bfbfbf;}
 
-/* contact layout end */
+/* ------------------------------- contact layout end ----------------------------------- */
 
 
 
-/* subscribe layout start */
+/* ------------------------------ subscribe layout start --------------------------------- */
 
 #subscribe {
     height: 200px;
@@ -307,7 +319,7 @@ a:hover {
     z-index: 10;
 }
 
-#subscribe_container_input {
+#subscribe_input {
     background-image: url("images/mail_img.png");
     background-repeat: no-repeat;
     background-position: 28px center;
@@ -321,7 +333,7 @@ a:hover {
     line-height: 20px;
 }
 
-#subscribe_container_submit {
+#subscribe_button {
     position: absolute;
     top: 5px;
     right: 6px;
@@ -344,9 +356,9 @@ a:hover {
     }
 }
 
-/* subscribe layout end */
+/* ------------------------------------ subscribe layout end ---------------------------------- */
 
-/* outro img layout start */
+/* ----------------------------------  outro img layout start --------------------------------- */
 
 #support_scope {
     position: relative;
@@ -369,9 +381,9 @@ a:hover {
     width: 100%;
 }
 
-/* outro img layout end */
+/* ------------------------------------ outro img layout end ------------------------------------- */
 
-/* scroll_btn layout start */
+/* ----------------------------------- scroll_btn layout start ----------------------------------- */
 
 
 #scroll_btn {
@@ -388,9 +400,9 @@ a:hover {
     background-image: url("images/scroll_hover_img.png");
 }
 
-/* scroll_btn layout end */
+/* --------------------------------- scroll_btn layout end -------------------------------- */
 
-/* modal layout start */
+/* ---------------------------------- modal layout start ----------------------------------- */
 
 #modal_scope {
     display: none;
@@ -435,9 +447,9 @@ a:hover {
     margin-bottom: 40px;
 }
 
-/* modal layout end */
+/* -------------------------------------- modal layout end ------------------------------ */
 
-/* footer layout start */
+/* ------------------------------------ footer layout start ----------------------------- */
 footer {
     height: 160px;
 }
@@ -461,4 +473,4 @@ footer {
     height: 42px;
 }
 
-/* footer layout end */
+/* ---------------------------------- footer layout end ------------------------------------ */
