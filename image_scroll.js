@@ -1,7 +1,11 @@
+const showMoreBtn = document.getElementById('show_more_btn');
 const imageContainer = document.getElementById('magazine_scroll_container');
 const imageList = document.getElementById('magazine_scroll_contents');
+
 let page = 1;
 let throttled = false;
+
+showMoreBtn.addEventListener('click', activateInfiniteScroll);
 
 function activateInfiniteScroll() {
     imageContainer.style.overflowY = 'scroll';
