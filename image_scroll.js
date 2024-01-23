@@ -14,7 +14,7 @@ function switchOnOff() {
         infiniteScrollManageBtn.textContent = "Stop";
     }
     if(infiniteScrollActive) {
-        imageList.innerHTML = ' ';
+        stopInfiniteScroll();
     }
 }
 
@@ -33,6 +33,13 @@ function activateInfiniteScroll() {
     });
 
     imageContainer.dispatchEvent(new Event('scroll'));
+}
+
+function stopInfiniteScroll() {
+    imageContainer.style.overflowY = 'hidden';
+    imageContainer.removeEventListener('scroll', controlScroll);
+    page = 1;
+    imageList.innerHTML = ''; // 기존 이미지 목록 초기화
 }
 
 function controlScroll() {
