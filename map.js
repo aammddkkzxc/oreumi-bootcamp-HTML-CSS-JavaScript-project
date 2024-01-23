@@ -1,4 +1,9 @@
 /*                   뼈대 시작                 */
+zoomInBtn = document.getElementById('zoom_in_btn');
+zoomOutBtn = document.getElementById('zoom_out_btn');
+initializeBtn = document.getElementById('initialize_btn');
+fullScreenBtn = document.getElementById('full_screen_btn');
+
 let map;
 let mapContainer;
 let mapOption;
@@ -50,6 +55,12 @@ function setMapType(maptype) {
         roadmapControl.className = 'btn';
     }
 }
+
+
+zoomInBtn.addEventListener('click', zoomIn);
+zoomOutBtn.addEventListener('click', zoomOut);
+initializeBtn.addEventListener('click', initializeScreen);
+fullScreenBtn.addEventListener('click', openFullScreen);
 
 // 지도 확대 함수 //
 function zoomIn() {

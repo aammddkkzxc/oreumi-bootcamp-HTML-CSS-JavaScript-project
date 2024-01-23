@@ -273,11 +273,11 @@ a:hover {
 .custom_typecontrol .btn {background:#fff;background:linear-gradient(#fff,  #e6e6e6);}
 .custom_typecontrol .selected_btn {color:#fff;background:#D97652;}
 .custom_zoomcontrol {position:absolute;top:60px;right:10px;width:38px;height:200px;z-index:10;background-color:#FFF;}
-.custom_zoomcontrol p {display:flex;justify-content:center;align-items:center;width:36px;height:50px;cursor:pointer;}
-.custom_zoomcontrol img{width:30px;height:30px;}
-.custom_zoomcontrol p:first-child{border-bottom:1px solid #bfbfbf;}
-.custom_zoomcontrol p:nth-child(2){border-bottom:1px solid #bfbfbf;}
-.custom_zoomcontrol p:nth-child(3){border-bottom:1px solid #bfbfbf;}
+.custom_zoomcontrol button {background-color:transparent;border-radius:0;display:flex;justify-content:center;align-items:center;width:36px;height:50px;cursor:pointer;}
+.custom_zoomcontrol button img{width:30px;height:30px;}
+.custom_zoomcontrol button:first-child{border-bottom:3px solid #bfbfbf;}
+.custom_zoomcontrol button:nth-child(2){border-bottom:3px solid #bfbfbf;}
+.custom_zoomcontrol button:nth-child(3){border-bottom:3px solid #bfbfbf;}
 
 /* contact layout end */
 
