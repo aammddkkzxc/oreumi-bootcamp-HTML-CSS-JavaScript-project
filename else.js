@@ -42,7 +42,7 @@ emailInput.addEventListener('keydown', function (event) {
 
 function loadEmail() {
     loadingImg.style.display ='flex';
-    setTimeout(()=>{loadingImg.style.display ='none'; validateEmail();}, 2000);
+    setTimeout(()=>{loadingImg.style.display ='none'; validateEmail();}, 1500);
 }
 
 function validateEmail() {
