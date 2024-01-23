@@ -1,4 +1,4 @@
-# oreumi-bootcamp-HTML-CSS-JavaScript-project
+# frontend-project
 
 ## 개요
 

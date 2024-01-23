@@ -1,19 +1,30 @@
 const imageContainer = document.getElementById('magazine_scroll_container');
 const imageList = document.getElementById('magazine_scroll_contents');
 let page = 1;
+let throttled = false;
 
 function activateInfiniteScroll() {
     imageContainer.style.overflowY = 'scroll';
 
     imageContainer.addEventListener('scroll', function () {
-        const isScrolledToBottom = imageContainer.scrollHeight - imageContainer.clientHeight <= imageContainer.scrollTop + 1;
-
-        if (isScrolledToBottom) {
-            fetchImages();
+        if (!throttled) {
+            throttled = true;
+            setTimeout(() => {
+                controlScroll();
+                throttled = false;
+            }, 300);
         }
     });
 
     imageContainer.dispatchEvent(new Event('scroll'));
+}
+
+function controlScroll() {
+    const isScrolledToBottom = imageContainer.scrollHeight - imageContainer.clientHeight <= imageContainer.scrollTop + 1;
+
+    if (isScrolledToBottom) {
+        fetchImages();
+    }
 }
 
 async function fetchImages() {
