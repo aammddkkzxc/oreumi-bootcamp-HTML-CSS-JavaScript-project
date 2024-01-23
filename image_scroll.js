@@ -11,7 +11,10 @@ infiniteScrollManageBtn.addEventListener('click', switchOnOff);
 function switchOnOff() {
     if(!infiniteScrollActive) {
         activateInfiniteScroll();
-        infiniteScrollManageBtn.textContent = "stop";
+        infiniteScrollManageBtn.textContent = "Stop";
+    }
+    if(infiniteScrollActive) {
+        imageList.innerHTML = ' ';
     }
 }
 
