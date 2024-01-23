@@ -321,6 +321,21 @@ a:hover {
     height: 50px;
 }
 
+#loading {
+    display: none;
+    position: absolute;
+    right: 100px;
+    bottom: -2920px;
+    content: url("images/loading_img.png");
+    animation: rotate 1.1s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* subscribe layout end */
 
 /* outro img layout start */
