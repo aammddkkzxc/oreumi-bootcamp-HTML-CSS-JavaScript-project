@@ -232,11 +232,11 @@ a:hover {
 
 /* 가상 요소 선긋기 시작 */
 
-#contact div:nth-child(1) {
+.wrapper_column {
     position: relative;
 }
 
-#contact div:nth-child(1)::before {
+.wrapper_column::before {
     content: "";
     position: absolute;
     top: -68px;
