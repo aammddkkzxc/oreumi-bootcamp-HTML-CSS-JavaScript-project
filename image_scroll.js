@@ -1,11 +1,20 @@
-const showMoreBtn = document.getElementById('show_more_btn');
+const infiniteScrollManageBtn = document.getElementById('infinite_scroll_manage_btn');
 const imageContainer = document.getElementById('magazine_scroll_container');
 const imageList = document.getElementById('magazine_scroll_contents');
 
 let page = 1;
 let throttled = false;
+let infiniteScrollActive = false;
 
-showMoreBtn.addEventListener('click', activateInfiniteScroll);
+infiniteScrollManageBtn.addEventListener('click', switchOnOff);
+
+function switchOnOff() {
+    if(!infiniteScrollActive) {
+        activateInfiniteScroll();
+        infiniteScrollManageBtn.textContent = "stop";
+    }
+}
+
 
 function activateInfiniteScroll() {
     imageContainer.style.overflowY = 'scroll';
