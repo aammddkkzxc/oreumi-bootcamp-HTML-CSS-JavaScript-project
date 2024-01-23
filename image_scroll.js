@@ -1,6 +1,6 @@
 const infiniteScrollManageBtn = document.getElementById('infinite_scroll_manage_btn');
 const imageContainer = document.getElementById('magazine_scroll_container');
-const imageList = document.getElementById('magazine_scroll_contents');
+let imageList = document.getElementById('magazine_scroll_contents');
 
 let page = 1;
 let throttled = false;
@@ -11,13 +11,15 @@ infiniteScrollManageBtn.addEventListener('click', switchOnOff);
 function switchOnOff() {
     if(!infiniteScrollActive) {
         activateInfiniteScroll();
+        infiniteScrollActive = true;
         infiniteScrollManageBtn.textContent = "Stop";
     }
-    if(infiniteScrollActive) {
+    else {
         stopInfiniteScroll();
+        infiniteScrollActive = false;
+        infiniteScrollManageBtn.textContent = "Show more";
     }
 }
-
 
 function activateInfiniteScroll() {
     imageContainer.style.overflowY = 'scroll';
@@ -39,7 +41,6 @@ function stopInfiniteScroll() {
     imageContainer.style.overflowY = 'hidden';
     imageContainer.removeEventListener('scroll', controlScroll);
     page = 1;
-    imageList.innerHTML = ''; // 기존 이미지 목록 초기화
 }
 
 function controlScroll() {

@@ -204,13 +204,17 @@ a:hover {
     margin: 120px 0 40px;
 }
 
+#article_magazine_text_content {
+    margin-bottom: 88px;
+}
+
 #magazine_scroll_contents {
     width: 1278px;
     height: 828px;
     display: grid;
     grid-template:378px / repeat(3, 378px);
     gap: 72px;
-    margin: 88px 0 100px;
+    margin-bottom: 100px;
 }
 
 #magazine_scroll_contents img{
